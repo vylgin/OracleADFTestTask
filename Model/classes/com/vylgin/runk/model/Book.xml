@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Book"
+  Version="11.1.1.61.92"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="BOOK"
+  AliasName="Book"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="IdBook"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="ID_BOOK"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="BOOK"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TitleBook"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="TITLE_BOOK"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="BOOK">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DateBook"
+    IsNotNull="true"
+    ColumnName="DATE_BOOK"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="BOOK">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="IdAuthor"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="ID_AUTHOR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="BOOK">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="BookPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="BOOK_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.vylgin.runk.model.Book.IdBook"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007074">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007074"/>
+      <Attr Name="_checkCondition" Value='"ID_BOOK" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.vylgin.runk.model.Book.IdBook"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007075">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007075"/>
+      <Attr Name="_checkCondition" Value='"TITLE_BOOK" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.vylgin.runk.model.Book.TitleBook"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007076">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007076"/>
+      <Attr Name="_checkCondition" Value='"DATE_BOOK" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.vylgin.runk.model.Book.DateBook"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007077">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007077"/>
+      <Attr Name="_checkCondition" Value='"ID_AUTHOR" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.vylgin.runk.model.Book.IdAuthor"/>
+    </AttrArray>
+  </Key>
+</Entity>

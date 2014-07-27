@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="Welcome">
+    <page>/Welcome.jspx</page>
+  </view>
+  <view id="ViewAllBooks">
+    <page>/ViewAllBooks.jspx</page>
+  </view>
+  <view id="ViewBooksFromDate">
+    <page>/ViewBooksFromDate.jspx</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">Welcome</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome id="__5">ViewAllBooks</from-outcome>
+      <to-activity-id id="__3">ViewAllBooks</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__12">
+      <from-outcome id="__13">VewBooksFromDate</from-outcome>
+      <to-activity-id id="__11">ViewBooksFromDate</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__6">
+    <from-activity-id id="__7">ViewAllBooks</from-activity-id>
+    <control-flow-case id="__9">
+      <from-outcome id="__10">Welcome</from-outcome>
+      <to-activity-id id="__8">Welcome</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__14">
+    <from-activity-id id="__15">ViewBooksFromDate</from-activity-id>
+    <control-flow-case id="__17">
+      <from-outcome id="__18">Welcome</from-outcome>
+      <to-activity-id id="__16">Welcome</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

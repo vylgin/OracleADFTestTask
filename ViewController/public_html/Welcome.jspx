@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:panelStretchLayout topHeight="50px" id="psl1">
+          <f:facet name="top">
+            <af:outputText value="WELCOME" id="ot1"
+                           inlineStyle="text-align:center; color:Gray; font-family:'Felix Titling'; font-size:x-large;"/>
+          </f:facet>
+          <f:facet name="center">
+            <!-- id="af_one_column_header_stretched"  -->
+            <af:decorativeBox theme="dark" id="db2">
+              <f:facet name="center">
+                <af:decorativeBox theme="medium" id="db1">
+                  <f:facet name="center">
+                    <af:panelSplitter id="ps1">
+                      <f:facet name="first">
+                        <af:panelList id="pl1">
+                          <af:commandButton text="View All Books" id="cb1"
+                                            action="ViewAllBooks"/>
+                          <af:commandButton text="Vew Books From Date" id="cb2"
+                                            action="VewBooksFromDate"/>
+                        </af:panelList>
+                      </f:facet>
+                      <f:facet name="second">
+                        <af:panelGroupLayout layout="scroll"
+                                             xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                                             id="pgl1">
+                          <f:verbatim>
+                            <p>
+                               
+                            </p>
+                          </f:verbatim>
+                          <af:outputText value="           This program demonstrates the technology of Oracle ADF"
+                                         id="ot2"
+                                         inlineStyle="text-align:center; font-size:medium;"/>
+                          <f:verbatim>
+                            <p>
+                               
+                            </p>
+                          </f:verbatim>
+                        </af:panelGroupLayout>
+                      </f:facet>
+                    </af:panelSplitter>
+                  </f:facet>
+                </af:decorativeBox>
+              </f:facet>
+            </af:decorativeBox>
+          </f:facet>
+        </af:panelStretchLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

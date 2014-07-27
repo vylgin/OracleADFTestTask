@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:panelStretchLayout topHeight="50px" id="psl1">
+          <f:facet name="top">
+            <af:outputText value="View all books a author" id="ot1"
+                           inlineStyle="color:Gray; font-family:'Felix Titling'; font-size:x-large; text-align:center;"/>
+          </f:facet>
+          <f:facet name="center">
+            <!-- id="af_one_column_header_stretched"  -->
+            <af:decorativeBox theme="dark" id="db1">
+              <f:facet name="center">
+                <af:decorativeBox theme="medium" id="db2">
+                  <f:facet name="center">
+                    <af:panelSplitter id="ps1">
+                      <f:facet name="first">
+                        <af:panelFormLayout id="pfl1">
+                          <af:panelLabelAndMessage label="#{bindings.LastName.hints.label}"
+                                                   id="plam2">
+                            <af:outputText value="#{bindings.LastName.inputValue}"
+                                           id="ot3"/>
+                          </af:panelLabelAndMessage>
+                          <af:panelLabelAndMessage label="#{bindings.FirstName.hints.label}"
+                                                   id="plam1">
+                            <af:outputText value="#{bindings.FirstName.inputValue}"
+                                           id="ot2"/>
+                          </af:panelLabelAndMessage>
+                          <af:panelLabelAndMessage label="#{bindings.MiddleName.hints.label}"
+                                                   id="plam4">
+                            <af:outputText value="#{bindings.MiddleName.inputValue}"
+                                           id="ot5"/>
+                          </af:panelLabelAndMessage>
+                          <af:panelLabelAndMessage label="#{bindings.Birthday.hints.label}"
+                                                   id="plam3">
+                            <af:outputText value="#{bindings.Birthday.inputValue}"
+                                           id="ot4">
+                              <af:convertDateTime pattern="#{bindings.Birthday.format}"/>
+                            </af:outputText>
+                          </af:panelLabelAndMessage>
+                          <f:facet name="footer">
+                            <af:group id="g1">
+                              <af:panelGroupLayout layout="horizontal"
+                                                   id="pgl1">
+                                <af:commandButton actionListener="#{bindings.First.execute}"
+                                                  text="First"
+                                                  disabled="#{!bindings.First.enabled}"
+                                                  partialSubmit="true"
+                                                  id="cb2"/>
+                                <af:commandButton actionListener="#{bindings.Previous.execute}"
+                                                  text="Previous"
+                                                  disabled="#{!bindings.Previous.enabled}"
+                                                  partialSubmit="true"
+                                                  id="cb3"/>
+                                <af:commandButton actionListener="#{bindings.Next.execute}"
+                                                  text="Next"
+                                                  disabled="#{!bindings.Next.enabled}"
+                                                  partialSubmit="true"
+                                                  id="cb4"/>
+                                <af:commandButton actionListener="#{bindings.Last.execute}"
+                                                  text="Last"
+                                                  disabled="#{!bindings.Last.enabled}"
+                                                  partialSubmit="true"
+                                                  id="cb1"/>
+                              </af:panelGroupLayout>
+                              <af:commandButton text="Go to Welcome"
+                                                id="cb5" action="Welcome"/>
+                            </af:group>
+                          </f:facet>
+                        </af:panelFormLayout>
+                      </f:facet>
+                      <f:facet name="second">
+                        <af:table value="#{bindings.BookView2.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.BookView2.rangeSize}"
+                                  emptyText="#{bindings.BookView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.BookView2.rangeSize}"
+                                  rowBandingInterval="0" id="t1">
+                          <af:column id="c3" headerText="Image" width="95">
+                            <af:image id="i1"
+                                      source="/getimage?idbook=#{row.IdBook}"/>
+                          </af:column>
+                          <af:column sortProperty="TitleBook" sortable="false"
+                                     headerText="#{bindings.BookView2.hints.TitleBook.label}"
+                                     id="c1" width="166">
+                            <af:outputText value="#{row.TitleBook}" id="ot6"/>
+                          </af:column>
+                          <af:column sortProperty="DateBook" sortable="false"
+                                     headerText="#{bindings.BookView2.hints.DateBook.label}"
+                                     id="c2" width="77">
+                            <af:outputText value="#{row.DateBook}" id="ot7">
+                              <af:convertDateTime pattern="#{bindings.BookView2.hints.DateBook.format}"/>
+                            </af:outputText>
+                          </af:column>
+                        </af:table>
+                      </f:facet>
+                    </af:panelSplitter>
+                  </f:facet>
+                </af:decorativeBox>
+              </f:facet>
+            </af:decorativeBox>
+          </f:facet>
+        </af:panelStretchLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

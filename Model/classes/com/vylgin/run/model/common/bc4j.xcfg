@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.vylgin.run.model.AppModule">
+      <AppModuleConfig name="AppModuleLocal" DeployPlatform="LOCAL" JDBCName="ConnectToFirst" jbo.project="com.vylgin.run.model.Model" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" ApplicationName="com.vylgin.run.model.AppModule">
+         <Security AppModuleJndiName="com.vylgin.run.model.AppModule"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="AppModuleShared" DeployPlatform="LOCAL" JDBCName="ConnectToFirst" jbo.project="com.vylgin.run.model.Model" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" ApplicationName="com.vylgin.run.model.AppModule">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Security AppModuleJndiName="com.vylgin.run.model.AppModule"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

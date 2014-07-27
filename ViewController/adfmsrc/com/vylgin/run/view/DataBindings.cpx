@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.61.92" id="DataBindings" SeparateXMLFiles="false"
+             Package="com.vylgin.run.view" ClientType="Generic">
+  <pageMap>
+    <page path="/ViewAllBooks.jspx"
+          usageId="com_vylgin_run_view_ViewAllBooksPageDef"/>
+    <page path="/ViewBooksFromDate.jspx"
+          usageId="com_vylgin_run_view_ViewBooksFromDatePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_vylgin_run_view_ViewAllBooksPageDef"
+          path="com.vylgin.run.view.pageDefs.ViewAllBooksPageDef"/>
+    <page id="com_vylgin_run_view_ViewBooksFromDatePageDef"
+          path="com.vylgin.run.view.pageDefs.ViewBooksFromDatePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.vylgin.run.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

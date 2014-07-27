@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.61.92" id="ViewAllBooksPageDef"
+                Package="com.vylgin.run.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AuthorView2" RangeSize="25"
+              DataControl="AppModuleDataControl" id="AuthorView2Iterator"
+              ChangeEventPolicy="ppr"/>
+    <iterator Binds="BookView2" RangeSize="25"
+              DataControl="AppModuleDataControl" id="BookView2Iterator"
+              ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="AuthorView2Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AuthorView2Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AuthorView2Iterator" id="MiddleName">
+      <AttrNames>
+        <Item Value="MiddleName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AuthorView2Iterator" id="Birthday">
+      <AttrNames>
+        <Item Value="Birthday"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="AuthorView2Iterator" id="First"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="AuthorView2Iterator" id="Previous"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="AuthorView2Iterator" id="Next"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="AuthorView2Iterator" id="Last"
+            RequiresUpdateModel="true" Action="last"/>
+    <tree IterBinding="BookView2Iterator" id="BookView2">
+      <nodeDefinition DefName="com.vylgin.run.model.BookView"
+                      Name="BookView20">
+        <AttrNames>
+          <Item Value="TitleBook"/>
+          <Item Value="DateBook"/>
+          <Item Value="IdBook"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

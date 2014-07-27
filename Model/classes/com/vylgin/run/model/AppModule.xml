@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="11.1.1.61.92"
+  InheritPersonalization="true"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+  </DesignTime>
+  <ViewUsage
+    Name="AuthorView1"
+    ViewObjectName="com.vylgin.run.model.AuthorView"/>
+  <ViewUsage
+    Name="BookView1"
+    ViewObjectName="com.vylgin.run.model.BookView"/>
+  <ViewUsage
+    Name="AuthorView2"
+    ViewObjectName="com.vylgin.run.model.AuthorView"/>
+  <ViewUsage
+    Name="BookView2"
+    ViewObjectName="com.vylgin.run.model.BookView"/>
+  <ViewLinkUsage
+    Name="ViewLink"
+    ViewLinkObjectName="com.vylgin.run.model.ViewLink"
+    SrcViewUsageName="com.vylgin.run.model.AppModule.AuthorView2"
+    DstViewUsageName="com.vylgin.run.model.AppModule.BookView2"
+    Reversed="false"/>
+</AppModule>

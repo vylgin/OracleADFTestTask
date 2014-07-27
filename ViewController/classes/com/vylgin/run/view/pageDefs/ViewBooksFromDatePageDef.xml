@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.61.92" id="ViewBooksFromDatePageDef"
+                Package="com.vylgin.run.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="BookView1" RangeSize="25"
+              DataControl="AppModuleDataControl" id="BookView1Iterator"/>
+    <searchRegion Criteria="BookViewCriteria"
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="BookView1Iterator" id="BookViewCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="BookView1Iterator" id="BookView1">
+      <nodeDefinition DefName="com.vylgin.run.model.BookView" Name="BookView10">
+        <AttrNames>
+          <Item Value="TitleBook"/>
+          <Item Value="DateBook"/>
+          <Item Value="IdBook"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

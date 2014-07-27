@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.vylgin.runk.model.AppModule">
+      <AppModuleConfig name="13DC76672B2" DBconnection="jdbc:oracle:thin:@localhost:1521:XE" password="1" ApplicationName="com.vylgin.runk.model.AppModule" DeployPlatform="LOCAL" IsLazyLoadingTrue="true" user="first" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" JDBCName="ConnectToFirst" BC4JConfigName="AppModuleLocal" jbo.project="com.vylgin.runk.model.Model">
+         <Database jbo.TypeMapEntries="Oracle" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="com.vylgin.runk.model.AppModule"/>
+         <Tester FullProxyInterfaceName="com.vylgin.runk.model.common.AppModule"/>
+         <Custom LastUsedConfiguration="AppModuleLocal"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>
