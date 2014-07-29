@@ -18,6 +18,6 @@ OracleADFTestTask
 
 ## Решение
 
-Ссылка на видео:
+Ссылка на видео: [Решение тестового задания по технологии Oracle ADF](http://youtu.be/hzqDaC_AOOI)
 
 [![Решение тестового задания по технологии Oracle ADF](http://img.youtube.com/vi/hzqDaC_AOOI/0.jpg)](http://youtu.be/hzqDaC_AOOI)
