@@ -1,8 +1,6 @@
 OracleADFTestTask
 =================
 
-Тестовое задание по Oracle ADF и Oracle DB.
-
 ## Задание
 
 
